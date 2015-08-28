@@ -1,28 +1,28 @@
 <?php
 
-namespace Snowcap\CacheBundle\Tests\DependencyInjection;
+namespace Leapt\CacheBundle\Tests\DependencyInjection;
 
+use Leapt\CacheBundle\DependencyInjection\LeaptCacheExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Snowcap\CacheBundle\DependencyInjection\SnowcapCacheExtension;
 
-class SnowcapCacheExtensionTest extends \PHPUnit_Framework_TestCase
+class LeaptCacheExtensionTest extends \PHPUnit_Framework_TestCase
 {
     public function testConfigLoad()
     {
-        $extension = new SnowcapCacheExtension();
+        $extension = new LeaptCacheExtension();
 
-        $config = array('namespace' => 'SnowcapCacheBundle');
+        $config = array('namespace' => 'LeaptCacheBundle');
         $extension->load(array($config), $container = new ContainerBuilder());
 
-        $this->assertEquals(array(), $container->getParameter('snowcap_cache.caches'));
+        $this->assertEquals(array(), $container->getParameter('leapt_cache.caches'));
     }
 
     public function testConfigLoadWithOneCache()
     {
-        $extension = new SnowcapCacheExtension();
+        $extension = new LeaptCacheExtension();
 
         $config = array(
-            'namespace' => 'SnowcapCacheBundle',
+            'namespace' => 'LeaptCacheBundle',
             'caches'    => array(
                 'default' => array(
                     'type'    => 'memcached',
@@ -32,6 +32,6 @@ class SnowcapCacheExtensionTest extends \PHPUnit_Framework_TestCase
         );
         $extension->load(array($config), $container = new ContainerBuilder());
 
-        $this->assertEquals($config['caches'], $container->getParameter('snowcap_cache.caches'));
+        $this->assertEquals($config['caches'], $container->getParameter('leapt_cache.caches'));
     }
 }

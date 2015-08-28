@@ -12,11 +12,11 @@ Installation
 
     Add the following line in your ``composer.json`` file:
 
-        "snowcap/cache-bundle": "dev-master",
+        "leapt/cache-bundle": "~1.0",
 
     Run composer:
 
-        composer update snowcap/cache-bundle
+        composer update leapt/cache-bundle
 
 2. Add this bundle to your application's kernel:
 
@@ -25,15 +25,15 @@ Installation
         {
             return array(
                 // ...
-                new Snowcap\CacheBundle\SnowcapCacheBundle(),
+                new Leapt\CacheBundle\LeaptCacheBundle(),
                 // ...
             );
         }
 
 3. Add the configuration in your config.yml file
 
-        snowcap_cache:
-            namespace: yournamspace
+        leapt_cache:
+            namespace: yournamespace
             caches:
                 tweets:
                     type: memcached
@@ -51,7 +51,7 @@ Installation
 Usage
 -----
 
-        $cacheManager = $this->get('snowcap_cache.manager');
+        $cacheManager = $this->get('leapt_cache.manager');
 
         $cache = $cacheManager->getCache('tweets');
 

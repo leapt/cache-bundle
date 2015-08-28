@@ -1,9 +1,9 @@
 <?php
 
-namespace Snowcap\CacheBundle\Tests\Cache;
+namespace Leapt\CacheBundle\Tests\Cache;
 
+use Leapt\CacheBundle\DependencyInjection\LeaptCacheExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Snowcap\CacheBundle\DependencyInjection\SnowcapCacheExtension;
 
 class ApcCacheTest extends \PHPUnit_Framework_TestCase
 {
@@ -21,10 +21,10 @@ class ApcCacheTest extends \PHPUnit_Framework_TestCase
         }
 
         $this->container = new ContainerBuilder();
-        $extension = new SnowcapCacheExtension();
+        $extension = new LeaptCacheExtension();
 
         $config = array(
-            'namespace' => 'SnowcapCacheBundle',
+            'namespace' => 'LeaptCacheBundle',
             'caches'    => array(
                 'default' => array(
                     'type'    => 'apc',
@@ -38,7 +38,7 @@ class ApcCacheTest extends \PHPUnit_Framework_TestCase
 
     public function testInfo()
     {
-        $defaultCache = $this->container->get('snowcap_cache.manager')->getCache('default');
+        $defaultCache = $this->container->get('leapt_cache.manager')->getCache('default');
 
         $info = $defaultCache->getInfo();
 
@@ -48,7 +48,7 @@ class ApcCacheTest extends \PHPUnit_Framework_TestCase
 
     public function testSet()
     {
-        $defaultCache = $this->container->get('snowcap_cache.manager')->getCache('default');
+        $defaultCache = $this->container->get('leapt_cache.manager')->getCache('default');
 
         $defaultCache->set('foo', 'bar');
 

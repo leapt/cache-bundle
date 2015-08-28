@@ -1,9 +1,9 @@
 <?php
 
-namespace Snowcap\CacheBundle\Tests\Manager;
+namespace Leapt\CacheBundle\Tests\Manager;
 
+use Leapt\CacheBundle\DependencyInjection\LeaptCacheExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Snowcap\CacheBundle\DependencyInjection\SnowcapCacheExtension;
 
 class CacheManagerTest extends \PHPUnit_Framework_TestCase
 {
@@ -15,10 +15,10 @@ class CacheManagerTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->container = new ContainerBuilder();
-        $extension = new SnowcapCacheExtension();
+        $extension = new LeaptCacheExtension();
 
         $config = array(
-            'namespace' => 'SnowcapCacheBundle',
+            'namespace' => 'LeaptCacheBundle',
             'caches'    => array(
                 'default' => array(
                     'type'    => 'memcached',
@@ -32,8 +32,8 @@ class CacheManagerTest extends \PHPUnit_Framework_TestCase
 
     public function testManagerInstantiation()
     {
-        $defaultCache = $this->container->get('snowcap_cache.manager')->getCache('default');
+        $defaultCache = $this->container->get('leapt_cache.manager')->getCache('default');
 
-        $this->assertInstanceOf('Snowcap\CacheBundle\Cache\MemcachedCache', $defaultCache);
+        $this->assertInstanceOf('Leapt\CacheBundle\Cache\MemcachedCache', $defaultCache);
     }
 }

@@ -1,4 +1,4 @@
 services:
-    snowcap_cache.manager:
-        class: Snowcap\CacheBundle\Manager\CacheManager
-        arguments: [%snowcap_cache.namespace%, %snowcap_cache.caches%]
+    leapt_cache.manager:
+        class: Leapt\CacheBundle\Manager\CacheManager
+        arguments: [ %leapt_cache.namespace%, %leapt_cache.caches% ]

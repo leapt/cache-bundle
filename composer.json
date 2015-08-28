@@ -1,9 +1,9 @@
 {
-    "name": "snowcap/cache-bundle",
+    "name": "leapt/cache-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony SnowcapCacheBundle",
+    "description": "Symfony LeaptCacheBundle",
     "keywords": ["cache"],
-    "homepage": "https://github.com/snowcap/SnowcapCacheBundle",
+    "homepage": "https://github.com/leapt/cache-bundle",
     "license": "MIT",
     "authors": [
         {
@@ -28,8 +28,7 @@
         "symfony/framework-bundle": ">=2.2"
     },
     "autoload": {
-        "psr-0": { "Snowcap\\CacheBundle": "" }
+        "psr-4": { "Leapt\\CacheBundle\\": "" }
     },
-    "target-dir": "Snowcap/CacheBundle",
     "minimum-stability": "dev"
 }

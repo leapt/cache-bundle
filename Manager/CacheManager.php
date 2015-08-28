@@ -1,8 +1,8 @@
 <?php
 
-namespace Snowcap\CacheBundle\Manager;
+namespace Leapt\CacheBundle\Manager;
 
-use Snowcap\CacheBundle\Cache\CacheInterface;
+use Leapt\CacheBundle\Cache\CacheInterface;
 
 class CacheManager
 {
@@ -19,8 +19,8 @@ class CacheManager
      */
     private $caches = array();
     private $cacheTypes = array(
-        'memcached' => 'Snowcap\CacheBundle\Cache\MemcachedCache',
-        'apc' => 'Snowcap\CacheBundle\Cache\ApcCache',
+        'memcached' => 'Leapt\CacheBundle\Cache\MemcachedCache',
+        'apc' => 'Leapt\CacheBundle\Cache\ApcCache',
     );
 
     /**

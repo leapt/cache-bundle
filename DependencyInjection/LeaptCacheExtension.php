@@ -1,6 +1,6 @@
 <?php
 
-namespace Snowcap\CacheBundle\DependencyInjection;
+namespace Leapt\CacheBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class SnowcapCacheExtension extends Extension
+class LeaptCacheExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -25,7 +25,7 @@ class SnowcapCacheExtension extends Extension
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.yml');
 
-        $container->setParameter('snowcap_cache.namespace', $config['namespace']);
-        $container->setParameter('snowcap_cache.caches', $config['caches']);
+        $container->setParameter('leapt_cache.namespace', $config['namespace']);
+        $container->setParameter('leapt_cache.caches', $config['caches']);
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace Snowcap\CacheBundle\Cache;
+namespace Leapt\CacheBundle\Cache;
 
-use Snowcap\CacheBundle\Exception\CacheException;
+use Leapt\CacheBundle\Exception\CacheException;
 
 class MemcachedCache extends AbstractCache
 {
@@ -21,7 +21,7 @@ class MemcachedCache extends AbstractCache
      * @param string $identifier
      * @param array $options
      * @throws \InvalidArgumentException
-     * @throws \Snowcap\CacheBundle\Exception\CacheException
+     * @throws \Leapt\CacheBundle\Exception\CacheException
      */
     public function __construct($namespace, $identifier, array $options)
     {
@@ -52,7 +52,7 @@ class MemcachedCache extends AbstractCache
     /**
      * @param string $key
      * @param mixed $value
-     * @throws \Snowcap\CacheBundle\Exception\CacheException
+     * @throws \Leapt\CacheBundle\Exception\CacheException
      */
     public function set($key, $value)
     {

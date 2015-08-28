@@ -1,6 +1,6 @@
 <?php
 
-namespace Snowcap\CacheBundle\Cache;
+namespace Leapt\CacheBundle\Cache;
 
 interface CacheInterface
 {

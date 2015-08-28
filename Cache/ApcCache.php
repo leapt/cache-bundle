@@ -1,8 +1,8 @@
 <?php
 
-namespace Snowcap\CacheBundle\Cache;
+namespace Leapt\CacheBundle\Cache;
 
-use Snowcap\CacheBundle\Exception\CacheException;
+use Leapt\CacheBundle\Exception\CacheException;
 
 class ApcCache extends AbstractCache
 {
@@ -43,7 +43,7 @@ class ApcCache extends AbstractCache
     /**
      * @param string $key
      * @param mixed $value
-     * @throws \Snowcap\CacheBundle\Exception\CacheException
+     * @throws \Leapt\CacheBundle\Exception\CacheException
      */
     public function set($key, $value)
     {

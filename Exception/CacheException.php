@@ -1,6 +1,6 @@
 <?php
 
-namespace Snowcap\CacheBundle\Exception;
+namespace Leapt\CacheBundle\Exception;
 
 class CacheException extends \RuntimeException
 {

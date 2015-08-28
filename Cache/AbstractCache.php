@@ -1,9 +1,13 @@
 <?php
 
-namespace Snowcap\CacheBundle\Cache;
+namespace Leapt\CacheBundle\Cache;
 
-use Snowcap\CacheBundle\Exception\CacheException;
+use Leapt\CacheBundle\Exception\CacheException;
 
+/**
+ * Class AbstractCache
+ * @package Leapt\CacheBundle\Cache
+ */
 abstract class AbstractCache implements CacheInterface
 {
     /**
