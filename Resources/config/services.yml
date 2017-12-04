@@ -1,4 +1,3 @@
 services:
-    leapt_cache.manager:
-        class: Leapt\CacheBundle\Manager\CacheManager
+    Leapt\CacheBundle\Manager\CacheManager:
         arguments: [ "%leapt_cache.namespace%", "%leapt_cache.caches%" ]
