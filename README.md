@@ -1,3 +1,5 @@
+Note: this bundle is not maintained anymore, consider using [symfony/cache](https://symfony.com/doc/current/cache.html) directly.
+
 Introduction
 ============
 
